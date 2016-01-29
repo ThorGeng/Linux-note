@@ -1,0 +1,78 @@
+# 安装git
+thor@thor-Lenovo-G480:~$ sudo apt-get install git
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+将会安装下列额外的软件包：
+  git-man liberror-perl
+建议安装的软件包：
+  git-daemon-run git-daemon-sysvinit git-doc git-el git-email git-gui gitk
+  gitweb git-arch git-bzr git-cvs git-mediawiki git-svn
+下列【新】软件包将被安装：
+  git git-man liberror-perl
+升级了 0 个软件包，新安装了 3 个软件包，要卸载 0 个软件包，有 263 个软件包未被升级。
+需要下载 3,421 kB 的软件包。
+解压缩后会消耗掉 21.9 MB 的额外空间。
+您希望继续执行吗？ [Y/n] y
+获取：1 http://cn.archive.ubuntu.com/ubuntu/ trusty/main liberror-perl all 0.17-1.1 [21.1 kB]
+获取：2 http://cn.archive.ubuntu.com/ubuntu/ trusty-updates/main git-man all 1:1.9.1-1ubuntu0.2 [699 kB]
+获取：3 http://cn.archive.ubuntu.com/ubuntu/ trusty-updates/main git amd64 1:1.9.1-1ubuntu0.2 [2,701 kB]
+下载 3,421 kB，耗时 3秒 (1,098 kB/s)
+正在选中未选择的软件包 liberror-perl。
+(正在读取数据库 ... 系统当前共安装有 166923 个文件和目录。)
+正准备解包 .../liberror-perl_0.17-1.1_all.deb  ...
+正在解包 liberror-perl (0.17-1.1) ...
+正在选中未选择的软件包 git-man。
+正准备解包 .../git-man_1%3a1.9.1-1ubuntu0.2_all.deb  ...
+正在解包 git-man (1:1.9.1-1ubuntu0.2) ...
+正在选中未选择的软件包 git。
+正准备解包 .../git_1%3a1.9.1-1ubuntu0.2_amd64.deb  ...
+正在解包 git (1:1.9.1-1ubuntu0.2) ...
+正在处理用于 man-db (2.6.7.1-1ubuntu1) 的触发器 ...
+正在设置 liberror-perl (0.17-1.1) ...
+正在设置 git-man (1:1.9.1-1ubuntu0.2) ...
+正在设置 git (1:1.9.1-1ubuntu0.2) ...
+#配置用户名和Email
+thor@thor-Lenovo-G480:~/work$ git config --global user.name "ThorGeng"
+thor@thor-Lenovo-G480:~/work$ git config --global user.email "gengjinlei1995@gmail.com"
+#为终端配置高亮
+thor@thor-Lenovo-G480:~/work$ git config --global color.status auto
+thor@thor-Lenovo-G480:~/work$ git config --global color.branch auto
+#配置key
+thor@thor-Lenovo-G480:~$ ssh-keygen -t rsa -C "gengjinlei1995@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/thor/.ssh/id_rsa): 
+Created directory '/home/thor/.ssh'.
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/thor/.ssh/id_rsa.
+Your public key has been saved in /home/thor/.ssh/id_rsa.pub.
+The key fingerprint is:
+85:59:2c:20:ac:f9:60:e0:b4:ca:0a:f9:05:1b:e4:df gengjinlei1995@gmail.com
+The key's randomart image is:
++--[ RSA 2048]----+
+|   .. .. ..      |
+|... ..  .+.      |
+|o+.o    o..      |
+| oO      .       |
+|oo B .  S        |
+|+.. + E          |
+|o. .             |
+|. .              |
+|                 |
++-----------------+
+
+thor@thor-Lenovo-G480:~/.ssh$ cat id_rsa.pub 
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDxtGRTTU4qMYeL0SEVtE2/t0xcxrd0HoZ5Fvz4Ec41bg3noR5OIJHnmmr4/3yKI5zYRu7d5P8CtDcjFxbnAnJuOa3oZSU6DV4viaRkx+7QewTcdMDWQT00n80MJqQU57rmGTKcBQ/DVQtXa1KCs75j+d0xuICr6cQxdt1gSdEB4jOo0c1UzJkzCkUEkfpVrINm9C3mGcUOPk64vLE9rWvyKp21jaUUdze9e/qjbu+opKeDDgxNs5hLDRPIVMJvpvuvBLv0ERfgy6kGPILAsVF/EzsZ47XE+6OPSxZJGDIjbJ8voSUPCBAOh790typX2L7aV6UGV7Zv4XgeJ5Ur9JWj gengjinlei1995@gmail.com
+
+
+
+将以上内容复制到github.com/setting/deploy keys下，title随便填，粘帖key.
+#验证是否成功，应出现以下提示
+thor@thor-Lenovo-G480:~/.ssh$ ssh -T git@github.com
+Hi ThorGeng/Linux-note! You've successfully authenticated, but GitHub does not provide shell access.
+
+
+
+
+

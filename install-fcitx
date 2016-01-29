@@ -1,0 +1,5 @@
+thor@thor-Lenovo-G480:~/work$ sudo apt-get install fcitx fcitx-pinyin
+
+语言支持中设置为fcitx，重启
+
+
