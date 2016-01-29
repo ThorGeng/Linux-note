@@ -1,0 +1,6 @@
+cd 解压目录
+建立Vim的编译环境 sudo apt-get build-dep vim
+配置选项
+./configure --enable-gui=gtk2 --enable-multibyte --enable-cscope --with-features=huge --with-compiledby=victor.li
+make
+sudo make install
